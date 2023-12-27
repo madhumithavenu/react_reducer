@@ -11,8 +11,11 @@ function App() {
   function decrement() {
     dispatch({ type: 'DEC' })
   }
-  function reset(){
-    dispatch({type: 'RES'})
+  function reset() {
+    dispatch({ type: 'RES' })
+  }
+  function addByTen() {
+    dispatch({ type: 'ADD', payload: 10 })
   }
   return (
     <div className="app">
@@ -21,6 +24,7 @@ function App() {
       <button className='brown-pill' onClick={increment}>Increment</button>
       <button className='green-pill' onClick={decrement}>Decrement</button>
       <button className='blue-pill' onClick={reset}>Reset</button>
+      <button className='purple-pill' onClick={addByTen}>Add by 10</button>
     </div>
   );
 }
